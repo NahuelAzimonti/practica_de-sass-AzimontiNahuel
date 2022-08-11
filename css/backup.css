@@ -1,0 +1,231 @@
+* {
+    margin:0;
+    padding: 0;
+    box-sizing: 0;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color:black;
+}
+li {
+    list-style: none;
+}
+/* Header */
+header {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky; */
+    top: 0;
+    background-color: white;
+    padding: 0.5rem 1rem;
+    z-index: 999;
+    
+}
+ .index-header__div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.index__header-nav {
+    width: 100%;
+}
+.index__header-ul {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  font-size: 18px;
+ }  
+ .index__header-nav li {
+    padding: 5px;
+}
+.index__header-ul li:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.index-header_title {
+    font-family: 'League Gothic', sans-serif;
+    font-size: 40px;
+}  
+/* HEADER END */
+
+/* MAIN */
+main {
+    background-color: rgb(136, 15, 15);
+    
+}
+.main__section--principalImage{
+    background-image: url(../medios/Tienda\ de\ musica.jpg);
+    width: 100%;
+    height: 800px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
+    
+    
+}
+.Main-section__h1 {
+    display: flex;
+    justify-content: center;
+    padding-top: 500px;
+    /* padding-right: 150px; */
+    font-size: 2rem;
+   
+    /* color:#D0D3D4; */
+}
+.main__h2 {
+    color: #D0D3D4;
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 30px 0;
+    font-size: 2rem;}
+.index-main-grid_container {
+        /*   */
+        display: grid;
+        padding-bottom: 40px;
+        grid-auto-rows: 400px;
+        grid-template-columns: 1fr 1.5fr 1.5fr ;
+       grid-template-areas:
+       "lateral guitarra piano"
+       "lateral bateria flauta" ;
+       
+}
+.grid-violin {
+   grid-area: lateral;
+   transition: all 2s;
+   background-image:url(../medios/Violin.1.jpg) ;
+   background-position: center; 
+   background-size: cover;
+}
+.grid-violin:hover {
+    transform: scale(1.1);
+}
+.grid-guitarra {
+ grid-area:guitarra ;
+ background-image:url(../medios/Guitarra\ acustica.jpg) ;
+ background-position: center; 
+ background-size: cover;
+ transition: all 2s;
+    } 
+.grid-guitarra:hover {
+    transform: scale(1.1);
+}
+.grid-piano {
+grid-area: piano;
+background-image:url(../medios/Piano.jpg) ;
+background-position: center; 
+background-size: cover;
+transition: all 2s;
+}
+.grid-piano:hover {
+    transform: scale(1.1);
+}
+.grid-bateria {
+grid-area: bateria;
+background-image:url(../medios/Bateria.jpg) ;
+background-position: center; 
+background-size: cover;
+transition: all 2s;
+}
+.grid-bateria:hover {
+    transform: scale(1.1);
+}
+.grid-Flauta {
+    grid-area: flauta;
+    background-image:url(../medios/Flauta.1.jpg) ;
+    background-position: center; 
+    background-size: cover;
+    transition: all 2s;
+}
+.grid-Flauta:hover{
+    transform: scale(1.1);
+}
+
+/* FOOTER */
+footer {
+    padding: 1rem;
+    background-color: #212F3D;
+}
+.redes {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    transition: all 1s ease-in ;
+}
+.redes:hover {
+    background-color:#212F3D ;
+    transform: scale(1.1);
+}
+.redes__sociales {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    max-width: 300px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+footer div ul li i {
+    font-size: 25px;
+}
+footer div ul li i:hover {
+    color: white;
+}
+.social__media--whatsapp {
+    position: fixed;
+    bottom: 130px;
+    right: 30px;
+}
+.fa-whatsapp {
+    font-size: 35px;
+    color: white;
+}
+
+/* Mobile first min-width */
+
+@media screen and (max-width:900px){
+    .index-main-grid_container{
+    grid-template-columns: repeat(2, 50%);
+    grid-template-rows: 300px 300px repeat(2, 200px);
+    grid-template-areas:
+    "lateral lateral"
+    "guitarra piano"
+    "bateria flauta"
+    /* "lateral guitarra piano"
+    "lateral bateria flauta" */ ;
+    }
+}
+@media screen and (max-width:443px) {
+    .index-header__div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    }
+    .index__header-ul {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 18px;
+       }  
+       .index-main-grid_container{
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: 300px 300px repeat(2, 200px);
+        grid-template-areas:
+        "lateral lateral"
+        "guitarra piano"
+        "bateria flauta"
+        /* "lateral guitarra piano"
+        "lateral bateria flauta" */ ;
+        }
+}  

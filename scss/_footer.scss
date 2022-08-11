@@ -1,0 +1,65 @@
+@import "./variables";
+footer {
+    background-color:$color-footer;
+    padding: 16px;
+    div.footer__div {
+        ul.redes__sociales {
+            display: flex;
+            list-style: none;
+            justify-content: space-evenly;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 20px;
+
+            div.redes {
+                border-radius: 50%;
+                height: 50px;
+                width: 50px;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: white;
+                transition: all 1s ease-in;
+
+                &:hover {
+                    background-color: #212F3D;
+                    transform: scale(1, 1);
+                }
+
+                li {
+                    a {
+                        i {
+                            color: black;
+                            font-size: 25px;
+
+                            &:hover { color: white;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    section.footer_section {
+        text-align: center;
+
+        p {
+            color: white;
+        } 
+        a {
+            color: white;
+        }
+    }
+
+}
+.social__media--whatsapp {
+    position: fixed;
+    bottom: 190px;
+    right: 30px;
+}
+.fa-whatsapp {
+    font-size: 35px;
+    color: white;
+}
+
